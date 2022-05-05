@@ -13,7 +13,7 @@ import SidebarRow from './SidebarRow'
 
 function Sidebar() {
   return (
-    <div>
+    <div className="col-span-2 flex flex-col">
       <img src="https://links.papareact.com/drq" className="h-10 w-10" />
       <SidebarRow Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={HashtagIcon} title="Explore" />
