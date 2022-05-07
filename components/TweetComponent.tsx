@@ -60,7 +60,7 @@ function TweetComponent({ tweet }: Props) {
       <div className=" mt-5 flex justify-between">
         <div className="flex cursor-pointer items-center space-x-2 text-gray-400">
           <ChatAlt2Icon className="h-5 w-5" />
-          <p>5</p>
+          <p>{comments.length}</p>
         </div>
         <div className="flex cursor-pointer items-center space-x-2 text-gray-400">
           <SwitchHorizontalIcon className="h-5 w-5" />
