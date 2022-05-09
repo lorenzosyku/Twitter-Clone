@@ -1,5 +1,6 @@
 import { RefreshIcon } from '@heroicons/react/outline'
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 import { Tweet } from '../typings'
 import { fetchTweets } from '../utils/fetchTweets'
 import TweetBox from './TweetBox'
@@ -12,8 +13,12 @@ interface Props {
 function Feed({ tweets: tweetsProp }: Props) {
   const [tweets, setTweets] = useState<Tweet[]>(tweetsProp)
   const handleRefresh = async () => {
+    const refreshToast = toast.loading('Refreshing...')
     const tweets = await fetchTweets()
     setTweets(tweets)
+    toast.success('Feed Updated', {
+      id: refreshToast
+    })
   }
   return (
     <div className="col-span-7 border-x lg:col-span-5">
