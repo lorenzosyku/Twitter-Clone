@@ -27,7 +27,7 @@ function Feed({ tweets: tweetsProp }: Props) {
         <RefreshIcon onClick={handleRefresh} className="mr-5 mt-5 h-8 w-8 cursor-pointer text-twitter transition-all duration-500 ease-out hover:rotate-180 active:scale-125" />
       </div>
       <div className="">
-        <TweetBox />
+        <TweetBox setTweets={setTweets}/>
       </div>
 
       <div className="">
