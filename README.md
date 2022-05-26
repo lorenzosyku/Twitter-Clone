@@ -1,3 +1,6 @@
+## Twitter Clone
+![alt text](./images/demo.png) 
+
 ## Built With
 
 - [NextJS](https://nextjs.org/) - The React Framework
